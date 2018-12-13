@@ -17,11 +17,13 @@ def build_dict(path):
             alpha[key] = line
     return alpha
 
+
 def sorted_line(line):
     # Sort the chars in this line and return a string.
     chars = [c for c in line]
     chars.sort()
     return "".join(chars)
+
 
 def anagram(alpha, line):
     # Return a list of anagrams from the dictionary.
@@ -34,8 +36,10 @@ def anagram(alpha, line):
 
 alpha = build_dict(r"wordlist.txt")
 
-iterator = itertools.combinations("tipka",3)
+iterator = itertools.combinations("marija", 6)
+
 for i in iterator:
-    #print(i)
+
+    # print(i)
     results = anagram(alpha, i)
     print(results)
